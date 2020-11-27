@@ -75,7 +75,6 @@ intersphinx_mapping = {
 # -- Setup function ----------------------------------------------------------
 def setup(app):
     app.connect("autodoc-skip-member", skip)
-    app.add_css_file('royalblue.css')
 
 
 # -- Skip function -----------------------------------------------------------
