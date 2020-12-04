@@ -37,7 +37,10 @@ def download(input_url, output_file, overwrite=False, verbose_ffmpeg=False, debu
     if debug:
         click.echo(" ".join(output.compile()))
 
-    output.run(quiet=not verbose_ffmpeg, overwrite_output=True)
+    try:
+        output.run(quiet=not verbose_ffmpeg, overwrite_output=True)
+    except FileNotFoundError:
+        raise click.ClickException("ffmpeg is not installed!\nPlease download it at https://ffmpeg.org/download.")
 
 
 @main.command()
