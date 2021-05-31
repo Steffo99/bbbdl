@@ -5,9 +5,9 @@ Once installed, bbbdl can be run from the command line.
 
 bbbdl has multiple operating modes; to view them all, run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   bbbdl --help
+   $ bbbdl --help
 
 Download mode
 -------------
@@ -16,17 +16,17 @@ Download mode is used to download and render a single meeting.
 
 This will download and render the meeting at ``MEETING_URL`` and save it as ``OUTPUT_FILE_NAME.mp4``.
 
-.. code-block:: bash
+.. code-block:: console
 
-   # bbbdl download -i MEETING_URL -o OUTPUT_FILE_NAME.mp4
+   $ bbbdl download -i MEETING_URL -o OUTPUT_FILE_NAME.mp4
 
 You can specify a different extension as output file, and ffmpeg will render the video using that codec.
 
 Additional options can be specified; to view the complete list, run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   bbbdl download --help
+   $ bbbdl download --help
 
 Sync mode
 ---------
@@ -36,9 +36,9 @@ so to not download and render them twice.
 
 All options can be viewed with:
 
-.. code-block:: bash
+.. code-block:: console
 
-   bbbdl sync --help
+   $ bbbdl sync --help
 
 List file
 ~~~~~~~~~
@@ -60,9 +60,9 @@ Syncing from a local list file
 If the JSON file is saved on your computer as `FILENAME.json`, you can sync the contents of the list file with the
 current folder by running:
 
-.. code-block:: bash
+.. code-block:: console
 
-   bbbdl sync -f FILENAME.json
+   $ bbbdl sync -f FILENAME.json
 
 
 Syncing from a remote list file
@@ -70,6 +70,6 @@ Syncing from a remote list file
 
 To sync using a JSON file provided through HTTPS, run:
 
-.. code-block:: bash
+.. code-block:: console
 
-   bbbdl sync -r https://example.org/my-remote-list.json
+   $ bbbdl sync -r https://example.org/my-remote-list.json
